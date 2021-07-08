@@ -1,0 +1,82 @@
+//group 43
+//Michal Yona 208094904
+//Rachel Stone 315353938
+
+class Main {
+     
+    function void main() {
+		var Char operation;
+		var Array operands;
+		var Int exit;
+		let exit = 0;
+		
+		let operands = Array.new(2);
+		
+		while (~exit){ 
+		
+			do Main.printMenu();
+			do Output.println();
+			
+			let operation = Keyboard.readInt("select operation code: ");
+			
+			//---------if the op is valid
+			if((operation > 0) & (operation< 13))
+			{
+				let operands[0] = Keyboard.readInt("Enter first number: ");
+				
+				//----------if the operand is binary then get another input fron user
+				if ((~(operation = 11)) & (~(operation = 12)))
+				{ 
+					let operands[1] = Keyboard.readInt("Enter second number: ");
+				}
+
+				do Calculator.compute(operands, operation);			
+			}
+			
+			//---------if the op is unvalid
+			else 
+			{ 
+				do Output.printString("Unvalid operation! Try Again");
+				do Output.println();
+			}
+			
+			let exit = Keyboard.readInt("press 0 to another calculation, and any other key to finish: ");
+			do Output.println();
+			do Screen.clearScreen();
+			do Output.moveCursor(0,0);
+		}
+	    return;
+    }
+	
+	function void printMenu()
+	{
+		do Output.printString("Welcome To Our Jack Calculator!");
+		do Output.println();
+		do Output.println();
+		do Output.printString("for plus + enter: 1 ");
+		do Output.println();
+		do Output.printString("for minus - enter: 2 ");
+		do Output.println();
+		do Output.printString("for mult * enter: 3 ");
+		do Output.println();
+		do Output.printString("for division / enter: 4 ");
+		do Output.println();
+		do Output.printString("for pow ^ enter: 5 ");
+		do Output.println();
+		do Output.printString("for or | (bits) enter: 6 ");
+		do Output.println();
+		do Output.printString("for and & (bits) enter: 7 ");
+		do Output.println();
+		do Output.printString("for equal = enter: 8 ");
+		do Output.println();
+		do Output.printString("for greater than > enter: 9 ");
+		do Output.println();
+		do Output.printString("for less than < enter: 10 ");
+		do Output.println();
+		do Output.printString("for not (bits) ~ enter: 11 ");
+		do Output.println();
+		do Output.printString("for abs | | enter: 12 ");
+		do Output.println();
+		return;
+	}
+}

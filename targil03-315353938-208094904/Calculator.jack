@@ -1,0 +1,143 @@
+//group 43
+//Michal Yona 208094904
+//Rachel Stone 315353938
+
+class Calculator 
+{
+	function void compute(Array operands, Char operation)
+	{
+		var int result;
+
+		// calculate plus
+		if(operation = 1){
+			let result = operands[0]+operands[1];
+			do Output.println();
+			do Output.printString("the sum is: ");
+			do Output.printInt(result);
+			do Output.println();
+			return;
+		}
+		
+		// calculate minus
+		if(operation = 2){
+			let result = (operands[0]-operands[1]);
+			do Output.println();
+			do Output.printString("the substruction is: ");
+			do Output.printInt(result);
+			do Output.println();
+			return;
+		}
+		
+		// calculate mult
+		if(operation= 3){
+			let result = (operands[0]*operands[1]);
+			do Output.println();
+			do Output.printString("the multiplicaton is: ");
+			do Output.printInt(result);
+			do Output.println();
+			return;
+		}
+		
+		// calculate division
+		if(operation = 4){
+			let result = (operands[0]/operands[1]);
+			do Output.println();
+			do Output.printString("the division is: ");
+			do Output.printInt(result);
+			do Output.println();
+			return;
+		}
+		
+		// calculate pow
+		if(operation = 5){
+		let result=1;
+			while(operands[1] > 0){
+				let result = (result*operands[0]);
+				let operands[1] = operands[1]-1;
+			}
+			do Output.println();
+			do Output.printString("the power is: ");
+			do Output.printInt(result);
+			do Output.println();
+			return;
+		}
+		
+		// calculate or (bits)
+		if(operation = 6){
+			let result = (operands[0]|operands[1]);
+			do Output.println();
+			do Output.printString("the or operation is: ");
+			do Output.printInt(result);
+			do Output.println();
+			return;
+		}
+		
+		// calculate and (bits)
+		if(operation = 7){
+			let result = (operands[0]&operands[1]);
+			do Output.println();
+			do Output.printString("the and operation is: ");
+			do Output.printInt(result);
+			do Output.println();
+			return;
+		}
+		
+		// calculate equal
+		if(operation = 8){
+			let result = (operands[0]=operands[1]);
+			do Output.println();
+			do Output.printString("the  result of equal operation is: ");
+			if (result = 0){
+				do Output.printString("false");
+			} 
+			else {
+				do Output.printString("true");
+			}
+			do Output.println();
+			return;
+		}
+		
+		// calculate not greater than
+		if(operation = 9){
+			let result = (operands[0]>operands[1]);
+			do Output.println();
+			do Output.printString("the result of greater operation is: ");
+			if (result = 0){
+				do Output.printString("false");
+			} 
+			else {
+				do Output.printString("true");
+			}
+			do Output.println();
+			return;
+		}
+		
+		// calculate not less than
+		if(operation = 10){
+			let result = (operands[0]<operands[1]);
+			do Output.println();
+			do Output.printString("the result of less operation is: ");
+			if (result = 0){
+				do Output.printString("false");
+			} 
+			else {
+				do Output.printString("true");
+			}
+			do Output.println();
+			return;
+		}
+		
+		// calculate not
+		if(operation = 11){
+			let result = ~(operands[0]);
+			do Output.println();
+			do Output.printString("the not operation is: ");
+			do Output.printInt(result);
+			do Output.println();
+			return;
+		}
+		return;
+	}
+	
+}
+
